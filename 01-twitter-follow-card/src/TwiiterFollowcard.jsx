@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-export function TwitterFollowCard({ userName, name }) {
-  const [ isFollowing, setIsFollowing ] = useState(false)
+export function TwitterFollowCard({ initialIsFollowing = false, userName, name }) {
+  const [ isFollowing, setIsFollowing ] = useState(initialIsFollowing)
 
   const text = isFollowing ? 'Siguiendo' : 'Seguir'
   const buttonClassName = isFollowing
