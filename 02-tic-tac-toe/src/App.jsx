@@ -1,14 +1,13 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
 import confetti from 'canvas-confetti'
 
-import { Square } from "./components/Square"
-import { Board } from "./components/Board"
+import { Square } from './components/Square'
+import { Board } from './components/Board'
 import { WinnerModal } from './components/WinnerModal'
 
 import { TURNS } from './constants'
-import { checkWinnerFrom, checkEndGame } from "./logic/board"
-import { saveGameToStorage, resetGameToStorage } from "./logic/storage/storage"
-
+import { checkWinnerFrom, checkEndGame } from './logic/board'
+import { saveGameToStorage, resetGameToStorage } from './logic/storage/storage'
 
 function App() {
   const [ board, setBoard ] = useState(() => {
@@ -59,18 +58,14 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    console.log('useEffect')
-  }, [])
-
   return (
-    <main className="board">
+    <main className='board'>
       <h1>Tic Tac Toe</h1>
       <button onClick={resetGame}>Reset del juego</button>
-      <section className="game">
+      <section className='game'>
         <Board board={board} updateBoard={updateBoard}/>
       </section>
-      <section className="turn">
+      <section className='turn'>
         <Square isSelected={turn === TURNS.X}>
           {TURNS.X}
         </Square>
@@ -78,7 +73,7 @@ function App() {
           {TURNS.O}
         </Square>
       </section>
-      
+
       <WinnerModal resetGame={resetGame} winner={winner}/>
 
     </main>

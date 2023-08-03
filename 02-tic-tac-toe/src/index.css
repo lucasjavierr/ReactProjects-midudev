@@ -71,6 +71,7 @@ body {
   width: fit-content;
   position: relative;
   border-radius: 10px;
+  align-items: center;
 }
 
 .turn .square,
@@ -84,6 +85,7 @@ body {
 .square.is-selected {
   color: #fff;
   background: #09f;
+  align-items: center;
 }
 
 .winner {
@@ -128,4 +130,5 @@ body {
   place-items: center;
   cursor: pointer;
   font-size: 48px;
+  align-items: center;
 }
