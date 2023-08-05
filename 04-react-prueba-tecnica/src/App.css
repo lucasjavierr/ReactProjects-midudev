@@ -7,3 +7,7 @@ main {
   font-family: system-ui;
   text-align: center;
 }
+
+button {
+  cursor: pointer;
+}
