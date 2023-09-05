@@ -23,6 +23,5 @@ module.exports = {
     "arrow-parens": ["error", "always"],
     "arrow-spacing": ["error", { "before": true, "after": true }],
     "space-before-function-paren": ["error", "always"],
-    "max-len": ["error", { "code": 20, "ignoreUrls": true, "auto": true }],
   }
 }
